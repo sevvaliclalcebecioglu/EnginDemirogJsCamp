@@ -60,3 +60,5 @@ console.log("</ul>")
 </ul> */}
 
 console.log(konutKredileri)
+
+// Fonksiyonları bir kere yazıyoruz sonra istediğimiz yerde istediğimiz kadar kullanıyoruz.

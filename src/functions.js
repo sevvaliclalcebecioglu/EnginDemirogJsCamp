@@ -1,17 +1,30 @@
-function addToCart(quantity,productName="Elma") {
+// log da bir fonksiyondur.
+
+function addToCart(quantity,productName="Elma") { // bir şey tanımlanmazsa elma gönder demektir.
     console.log("Sepete eklendi : ürün : " 
     + productName + " adet : " + quantity)
 }
+
+// Yukarıda bir kere yazdığım fonksiyon sayesinde addToCart'ı kullanarak istediğim kadar şey ekleyebilirim. 
+
+// JavaScriptte undifened var. Tanımlanmamış demektir. Null ile karıştırılmamalıdır.
+
+// JavaScriptte typeScript kullanmadığım sürece tip güvenliği yoktur. Tip belirtmediğim için de istediğimi kullanabilirim.
+
+// Çağrımızdaki parametreler sırasıyla yerleşir.
 
 //addToCart()
 addToCart(10)
 //addToCart(15)
 
+
 let sayHello = ()=>{
     console.log("Hello World!")
 }
 
-sayHello()
+sayHello()  // Bunu çağırdığım zaman ekrana hello world yazar.
+
+// Fonksiyonu değişkene atayabiliriz.
 
 let sayHello2 = function () {
     console.log("Hello World 2")
@@ -19,6 +32,9 @@ let sayHello2 = function () {
 
 sayHello2();
 
+// javascripte ; koymak önemli değildir.
+
+// ürünü sepete eklerken birden çok bilgiye ihtiyacım var.
 function addToCart2(productName, quantity, unitPrice) {
     
 }
@@ -26,6 +42,8 @@ function addToCart2(productName, quantity, unitPrice) {
 addToCart2("Elma",5,10)
 addToCart2("Armut", 2, 20)
 addToCart2("Limon",3,15)
+
+// parametreleri ayrı ayrı geçmek yerine , o özellikleri içeren obje oluştururum .
 
 let product1 = {productName:"Elma", unitPrice:10, quantity:5}
 
