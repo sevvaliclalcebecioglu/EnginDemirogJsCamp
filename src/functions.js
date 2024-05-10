@@ -47,6 +47,10 @@ addToCart2("Limon",3,15)
 
 let product1 = {productName:"Elma", unitPrice:10, quantity:5}
 
+// Bana product diye bir şey ver. Ben onu kullanayım. 
+
+// Aşağıda product1'i product ismi ile ele alıyorum.
+
 function addToCart3(product) {
     console.log("Ürün : "+product.productName)
     console.log("Adet : "+product.quantity)
@@ -56,11 +60,16 @@ function addToCart3(product) {
 
 addToCart3(product1)
 
+// değer ve referans tip 
+
 let product2 = {productName:"Elma", unitPrice:10, quantity:5}
 let product3 = {productName:"Elma", unitPrice:10, quantity:5}
 product2 = product3
 product2.productName = "KARPUZ"
-console.log(product3.productName)
+console.log(product3.productName) // ekrana karpuz yazdı.
+
+// Objeler(arrays) => referans tiptir
+// Burdada diyorki product2'nin referans numarası product3'ün referans numarasıdır. Yani bellekteki veriyi artık hem product2 hemde product3 tutuyor. product2'nin name karpuz dediğim zamanda , zaten product2 referans no olarak product3 ile aynı numarayı tuttuğu için , karpuz product2'ye değil ikisinin ortak tuttuğu referans numarasına atanır . Ve ekrana product3'ü yazdırdığımız zaman da çıktı olarak bana karpuz verir.
 
 let sayi1 = 10
 let sayi2 = 20
@@ -68,9 +77,21 @@ sayi1 = sayi2
 sayi2 = 100
 console.log(sayi1)
 
+// Sayısal veriler => değer tip
+// Değer tip : Direk değeri atıyoruz ve işimiz bitiyor. Değeri atıyoruz , kendini değil.
+// Mesela; sayı2 sayı 1'e atandıktan sonra sayı1 20 oluyor. Sonra sayı2= 100 dediğimiz zaman da sadece sayı2'nin değeri değişiyor . sayı1 = 20 olarak ekrana yazılıyor
+// Bütün yazılım dillerinde bu böyledir. Farklı özellikler olabilir belki ama mantık bu şekildedir.
+// Demekki biz sayılara değer tip diyeceğiz.
+// Değer tip ; stackde tutulur. Heap ile bir alakası yoktur.
+
+// Aynı anda birden fazla döngüyü sepete ekleyebiliriz.
+
 function addToCart4(products) {
     console.log(products)
 }
+
+// array'lerin içinde objelerde tutabiliriz.
+// 1.41 saniyede kaldık
 
 let products = [
     {productName:"Elma", unitPrice:10, quantity:5},
@@ -78,7 +99,7 @@ let products = [
     {productName:"Karpuz", unitPrice:10, quantity:5}
 ]
 
-addToCart4(products)
+addToCart4(products) // addToCarta elimdeki tüm ürünleri gönderiyorum.
 
 function add(bisey,...numbers) { //rest
     let total = 0;
