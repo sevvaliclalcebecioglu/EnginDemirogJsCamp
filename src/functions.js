@@ -87,13 +87,15 @@ console.log(sayi1)
 // Aynı anda birden fazla döngüyü sepete ekleyebiliriz.
 
 function addToCart4(products) {
-    console.log(products)
+    console.log(products) // blok burası
 }
 
 // array'lerin içinde objelerde tutabiliriz.
-// 1.41 saniyede kaldık
 
-let products = [
+// scope 
+// Bir fonksiyon tanımlandığında yazılan blok önemlidir.
+
+let products = [  // bir üst scope da burasıdır.
     {productName:"Elma", unitPrice:10, quantity:5},
     {productName:"Armut", unitPrice:10, quantity:5},
     {productName:"Karpuz", unitPrice:10, quantity:5}
@@ -101,8 +103,22 @@ let products = [
 
 addToCart4(products) // addToCarta elimdeki tüm ürünleri gönderiyorum.
 
-function add(bisey,...numbers) { //rest
-    let total = 0;
+// İki sayıyı toplayan operasyon
+
+function add(number1, number2) {
+    console.log(number1 + number2)
+}
+
+add(20,30) // 20 + 30 = 50
+
+// Birden fazla sayı için ;
+
+// ...numbers => gönderilen parametreleri bir array'in içine koy demektir. Buna rest operatörü diyoruz.
+
+// rest'i her zaman fonksiyonun sonuna bırakın.
+
+function add2(bisey,...numbers) { //rest
+    let total = 0; // ilk başlangıç değeri
     for (let i = 0; i < numbers.length; i++) {
         total = total + numbers[i]
     }
@@ -110,12 +126,13 @@ function add(bisey,...numbers) { //rest
     console.log(bisey)
 }
 
-add(20,30)
+add2(20,30) // let numbers = [20,30] diye kapsülledi
 //add(20,30, 40)
 //add(20,30, 40, 50)
 
 let numbers = [30,10,500,600,120]
-//console.log(...numbers)
+// console.log(...numbers)
+// en büyük sayıyı bana verir.
 console.log(Math.max(...numbers))
 
 let [icAnadolu,marmara,karadeniz,[icAnadoluSehirleri]] = [
