@@ -130,8 +130,11 @@ add2(20,30) // let numbers = [20,30] diye kapsülledi
 //add(20,30, 40)
 //add(20,30, 40, 50)
 
+// spread ayrıştırır, rest toparlar.
+
 let numbers = [30,10,500,600,120]
-// console.log(...numbers)
+// console.log(...numbers)  // Bu şekilde (...numbers) diye kullandığımız zaman [] ile değilde ayrı olarak gelir.
+
 // en büyük sayıyı bana verir.
 console.log(Math.max(...numbers))
 
